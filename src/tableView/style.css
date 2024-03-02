@@ -1,0 +1,232 @@
+.search-box{
+    -fx-background-color:#70E5D9;
+    -fx-background-radius: 100;
+}
+
+.box{
+    -fx-background-color: #E0D8B0;
+    -fx-background-radius: 30;
+}
+
+.box2{
+    -fx-background-color: #D3E4CD;
+    -fx-background-radius: 20;
+}
+ 
+.box3{
+    -fx-background-color: #47B5FF;
+    -fx-background-radius: 20;
+}
+
+.box4{
+    -fx-background-color: #045c70;
+    -fx-background-radius: 20;
+}
+
+.box5{
+    -fx-background-color: #e06f51;
+    -fx-background-radius: 20;
+}
+
+.box6{
+    -fx-background-color: #ECB365;
+    -fx-background-radius: 20;
+}
+.box7{
+    -fx-background-color: #064663;
+    -fx-background-radius: 20;
+}
+
+.box8{
+    -fx-background-color: #406882;
+    -fx-background-radius: 20;
+}
+
+.box9{
+    -fx-background-color: #B0D0D3;
+    -fx-background-radius: 20;
+}
+
+.box-samll{
+    -fx-background-color: #06113C;
+    -fx-background-radius: 50;
+}
+.box-samll1{
+    -fx-background-color: #FF8C32;
+    -fx-background-radius: 50;
+}
+.box-samll2{
+    -fx-background-color: #FF6B6B;
+    -fx-background-radius: 50;
+}
+.box-samll3{
+    -fx-background-color: #243D25;
+    -fx-background-radius: 50;
+}
+
+
+.box-samll4{
+    -fx-background-color: #03045E;
+    -fx-background-radius: 50;
+}
+.box-samll5{
+    -fx-background-color: #00B4D8;
+    -fx-background-radius: 50;
+}
+.box-samll6{
+    -fx-background-color: #90E0EF;
+    -fx-background-radius: 50;
+}
+.box-samll7{
+    -fx-background-color: #398AB9;
+    -fx-background-radius: 50;
+}
+
+
+.box-samll8{
+    -fx-background-color: #D67D3E;
+    -fx-background-radius: 50;
+}
+.box-samll9{
+    -fx-background-color: #00B4D8;
+    -fx-background-radius: 50;
+}
+.box-samll10{
+    -fx-background-color: #570530;
+    -fx-background-radius: 50;
+}
+.box-samll11{
+    -fx-background-color: #CA965C;
+    -fx-background-radius: 50;
+}
+
+
+.box_graid{
+    -fx-background-color: #04293A;
+    -fx-background-radius: 20;
+}
+
+.labelDesign{
+    -fx-background-color: #1e81b0;
+    -fx-background-radius: 10;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.search-button{
+    -fx-background-color: #828282;
+    -fx-background-radius: 30;
+}
+
+.button-1{
+    -fx-background-color: #062C30;
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+}
+
+.button-1:pressed {
+  -fx-background-color: #981100;
+}
+
+.button-2{
+    -fx-background-color: #05595B;
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+}
+
+.button-2:pressed {
+  -fx-background-color: #981100;
+}
+
+.button-3{
+    -fx-background-color: #461111;
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+}
+
+.button-3:pressed {
+  -fx-background-color: #981100;
+}
+
+.button-4{
+    -fx-background-color: #F8B400;
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+}
+
+.button-4:pressed {
+  -fx-background-color: #981100;
+}
+
+.button-5{
+    -fx-background-color: #041562;
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+}
+
+.button-5:pressed {
+  -fx-background-color: #981100;
+}
+.button-6{
+    -fx-background-color: #FF5959;
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+}
+
+.button-6:pressed {
+  -fx-background-color: #981100;
+}
+
+.button-7{
+    -fx-background-color: #6D9886;
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+}
+
+.button-8{
+    -fx-background-color: #47B5FF;
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+}
+
+.button-7:pressed {
+  -fx-background-color: #981100;
+}
+
+.input{
+    -fx-background-radius: 30;
+}
+
+.input_outer{
+
+    -fx-background-radius: 30;
+}
+
+.right-bar{
+    -fx-background-color: #D3D3D3;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+}
+
+
+.comboBox{
+    -fx-background-color: #40E0D0;
+    -fx-background-radius: 30;
+}
+
+.add-btn{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+}
+
+
+.table-view .column-header {
+    -fx-background-color: #E9EFC0;
+}
+
+

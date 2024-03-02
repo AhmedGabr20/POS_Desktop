@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="572.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddUserController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="63.0" prefWidth="572.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#close" prefHeight="25.0" prefWidth="43.0" styleClass="button-6" text="x">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Text fill="#1315eb" strokeType="OUTSIDE" strokeWidth="0.0" text="بيــانــــــــات المستخدم" textAlignment="CENTER" wrappingWidth="509.46997022628784">
+               <font>
+                  <Font name="Arial Bold Italic" size="39.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <Pane prefHeight="7.0" prefWidth="567.0" style="-fx-background-color: #000000;" />
+      <HBox alignment="CENTER" prefHeight="73.0" prefWidth="572.0">
+         <children>
+            <TextField fx:id="nameFild" alignment="CENTER" prefHeight="35.0" prefWidth="397.0" styleClass="input">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></TextField>
+            <Text fill="#ea0808" strokeType="OUTSIDE" strokeWidth="0.0" text="الأسم" textAlignment="CENTER" wrappingWidth="150.13671875">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0" prefHeight="54.0" prefWidth="572.0">
+         <children>
+            <TextField fx:id="phoneFild" alignment="CENTER" prefHeight="35.0" prefWidth="398.0" styleClass="input">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></TextField>
+            <Text fill="#ea0808" strokeType="OUTSIDE" strokeWidth="0.0" text="التليفون" textAlignment="CENTER" wrappingWidth="150.13671875">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="113.0" prefHeight="57.0" prefWidth="572.0">
+         <children>
+            <TextField fx:id="passwordfild" alignment="CENTER" prefHeight="35.0" prefWidth="394.0" styleClass="input">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></TextField>
+            <Text fill="#ea0808" strokeType="OUTSIDE" strokeWidth="0.0" text="الباسورد" textAlignment="CENTER" wrappingWidth="150.13671875">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="55.0" prefWidth="572.0">
+         <children>
+            <ComboBox fx:id="rolesFild" prefHeight="34.0" prefWidth="267.0" style="-fx-font-size: 18;" styleClass="comboBox" />
+            <Text fill="#ea0808" strokeType="OUTSIDE" strokeWidth="0.0" text="الدور" textAlignment="RIGHT" wrappingWidth="139.47015376885793">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="168.0" prefWidth="572.0">
+         <children>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#save" prefHeight="41.0" prefWidth="124.0" styleClass="button-1" text="حفظ">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="25" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

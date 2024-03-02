@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="942.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="666.0" prefWidth="942.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="371.0" style="-fx-background-color: #47B5FF;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="234.0" prefWidth="371.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="image" fitHeight="219.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="230.0" prefWidth="371.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="222.0" prefWidth="351.0">
+                           <children>
+                              <Text fx:id="CompanyName" strokeType="OUTSIDE" strokeWidth="0.0" text="شركة النور للتوريدات العمومية">
+                                 <font>
+                                    <Font name="PT Bold Stars" size="24.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="CompanySpecialty" strokeType="OUTSIDE" strokeWidth="0.0" text="وإدارة تشغيل المصانع والشركات">
+                                 <font>
+                                    <Font name="PT Bold Stars" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="154.0" prefWidth="371.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="BOTTOM_CENTER" prefHeight="167.0" prefWidth="315.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="تصميم وتنفيذ م/ أحمد جبر">
+                                 <font>
+                                    <Font name="PT Bold Heading" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="01277437142 - 01013884717">
+                                 <font>
+                                    <Font name="PT Bold Heading" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="594.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="148.0" prefWidth="594.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="148.0" prefWidth="497.0" styleClass="box3" HBox.hgrow="NEVER">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="BACKWARD" onMouseClicked="#logout" size="40" />
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="تسجيل خروج">
+                                       <font>
+                                          <Font name="PT Bold Heading" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="148.0" prefWidth="334.0">
+                                 <children>
+                                    <Label fx:id="user_name" alignment="CENTER" prefHeight="45.0" prefWidth="400.0" text="مرحبا / محمد صابر جبر" textFill="#fffafa">
+                                       <font>
+                                          <Font name="PT Bold Heading" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="user_date" alignment="CENTER" prefHeight="45.0" prefWidth="400.0" text="20/6/2022" textFill="#fffafa">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER" size="50" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#customerPage" prefHeight="63.0" prefWidth="183.0" styleClass="button-2" text="العملاء" textFill="#f60b0b">
+                           <font>
+                              <Font name="PT Bold Heading" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="20" />
+                           </graphic>
+                        </Button>
+                        <Button graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#itemsPage" prefHeight="63.0" prefWidth="188.0" styleClass="button-1" stylesheets="@style.css" text="الاصناف" textFill="#f60b0b">
+                           <font>
+                              <Font name="PT Bold Heading" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CUBES" size="20" />
+                           </graphic>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="btn_store" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#storesPage" prefHeight="63.0" prefWidth="182.0" styleClass="button-4" text="المخازن" textFill="#f60b0b">
+                           <font>
+                              <Font name="PT Bold Heading" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="TRUCK" size="25" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btn_company" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#companes" prefHeight="63.0" prefWidth="187.0" styleClass="button-7" text="الموردين" textFill="#f60b0b">
+                           <font>
+                              <Font name="PT Bold Heading" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER" size="25" />
+                           </graphic>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#reportsPage" prefHeight="62.0" prefWidth="180.0" styleClass="button-5" text="عرض سعر" textFill="#f60b0b">
+                           <font>
+                              <Font name="PT Bold Heading" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CLIPBOARD" size="20" />
+                           </graphic>
+                        </Button>
+                        <Button graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#invoicesPage" prefHeight="63.0" prefWidth="182.0" styleClass="button-6" text="اضافة فاتورة" textFill="#f60b0b">
+                           <font>
+                              <Font name="PT Bold Heading" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="FILE" size="20" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="btn_users" graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#users" prefHeight="63.0" prefWidth="173.0" styleClass="button-1" text="لوحة التحكم" textAlignment="CENTER" textFill="#f60b0b">
+                           <font>
+                              <Font name="PT Bold Heading" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="COG" size="20" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btn_sales" mnemonicParsing="false" onMouseClicked="#salesPage" prefHeight="63.0" prefWidth="184.0" styleClass="button-3" text="المبيعات" textFill="#f60b0b">
+                           <font>
+                              <Font name="PT Bold Heading" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CALCULATOR" size="20" />
+                           </graphic>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

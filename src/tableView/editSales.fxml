@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="496.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditSalesController">
+   <children>
+      <Text fill="#3d03dc" layoutX="169.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="تعديل الفاتوره">
+         <font>
+            <Font name="Arial Bold" size="37.0" />
+         </font>
+      </Text>
+      <Pane layoutX="1.0" layoutY="66.0" prefHeight="6.0" prefWidth="496.0" style="-fx-background-color: #000000;" />
+      <Button fx:id="save_btn" graphicTextGap="10.0" layoutX="198.0" layoutY="425.0" mnemonicParsing="false" onMouseClicked="#save" prefHeight="50.0" prefWidth="119.0" styleClass="button-1" text="حفظ" textAlignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="25" />
+         </graphic>
+      </Button>
+      <Text fx:id="customername_feild" layoutX="4.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="اسم العميل" textAlignment="CENTER" wrappingWidth="486.2700653076172" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="5.7299346923828125">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="customer_id_feild" layoutX="14.0" layoutY="26.0" text="0" />
+      <HBox fx:id="total_box" alignment="CENTER_RIGHT" layoutX="73.0" layoutY="105.0" prefHeight="50.0" prefWidth="370.0">
+         <children>
+            <TextField fx:id="totalCol" alignment="CENTER" prefHeight="35.0" prefWidth="181.0" styleClass="input">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Text fill="#ef0404" strokeType="OUTSIDE" strokeWidth="0.0" text="إجمالي الفاتورة " wrappingWidth="129.47003173828125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox fx:id="remain_box" alignment="CENTER_RIGHT" layoutX="67.0" layoutY="149.0" prefHeight="60.0" prefWidth="370.0">
+         <children>
+            <TextField fx:id="remainCol" alignment="CENTER" prefHeight="35.0" prefWidth="181.0" styleClass="input">
+               <HBox.margin>
+                  <Insets right="35.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Text fill="#ef0404" strokeType="OUTSIDE" strokeWidth="0.0" text="الملبغ المتبقي" wrappingWidth="118.8033447265625">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox fx:id="newPaid_box" alignment="CENTER_RIGHT" layoutX="48.0" layoutY="293.0" prefHeight="60.0" prefWidth="386.0">
+         <children>
+            <TextField fx:id="newPaidCol" alignment="CENTER" prefHeight="35.0" prefWidth="181.0" styleClass="input">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Text fx:id="newpaid_text" fill="#ef0404" strokeType="OUTSIDE" strokeWidth="0.0" text="دفع جديد" wrappingWidth="98.27001953125">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <HBox fx:id="newPaid_box1" alignment="CENTER_RIGHT" layoutX="12.0" layoutY="353.0" prefHeight="60.0" prefWidth="430.0">
+         <children>
+            <TextField fx:id="paidType" alignment="CENTER" prefHeight="55.0" prefWidth="239.0" styleClass="input">
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </TextField>
+            <Text fill="#ef0404" strokeType="OUTSIDE" strokeWidth="0.0" text="تفاصيل السداد" wrappingWidth="111.8699951171875">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <DatePicker fx:id="from_date" layoutX="99.0" layoutY="207.0" prefHeight="39.0" prefWidth="175.0" />
+      <Text fx:id="date_text" fill="#ef0404" layoutX="331.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="تاريخ الفاتورة " wrappingWidth="129.47003173828125">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="due_date" layoutX="100.0" layoutY="254.0" prefHeight="39.0" prefWidth="175.0" />
+      <Text fx:id="due_text" fill="#ef0404" layoutX="332.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="تاريخ الاستحقاق" wrappingWidth="129.47003173828125">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

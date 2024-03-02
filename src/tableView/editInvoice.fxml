@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="689.0" prefWidth="898.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.editInvoiceController">
+   <children>
+      <TableView fx:id="invoiceTable" layoutX="94.0" layoutY="108.0" prefHeight="200.0" prefWidth="797.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="108.0">
+         <columns>
+            <TableColumn fx:id="editCol" maxWidth="1000.0" minWidth="50.0" prefWidth="126.0000114440918" text="تعديل" />
+            <TableColumn fx:id="totalTAB" maxWidth="1000.0" minWidth="75.0" prefWidth="105.33331298828125" text="الاجمالي" />
+            <TableColumn fx:id="priceTAB" maxWidth="1000.0" minWidth="75.0" prefWidth="123.77774047851562" text="السعر" />
+            <TableColumn fx:id="amountTAB" maxWidth="1000.0" minWidth="50.0" prefWidth="130.88894653320312" text="الكمية" />
+            <TableColumn fx:id="itemnameTAB" minWidth="150.0" prefWidth="252.00003051757812" text="اسم الصنف" />
+            <TableColumn fx:id="itemCodeTAB" maxWidth="1000.0" minWidth="75.0" prefWidth="103.111083984375" text="الكود" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <VBox layoutX="1.0" layoutY="7.0" prefHeight="98.0" prefWidth="888.0" styleClass="box" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="110.0" prefWidth="888.0" spacing="10.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="98.0" prefWidth="177.0">
+                     <children>
+                        <HBox fx:id="inv_box" alignment="CENTER" prefHeight="39.0" prefWidth="60.0" spacing="10.0">
+                           <children>
+                              <FontAwesomeIconView glyphName="DOWNLOAD" onMouseClicked="#save" size="25" />
+                              <Label text="نسخة فاتورة" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="46.0" prefWidth="60.0" spacing="10.0">
+                           <children>
+                              <FontAwesomeIconView glyphName="DOWNLOAD" onMouseClicked="#savePay" size="25" />
+                              <Label text="فاتورة بالسداد" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="98.0" prefWidth="102.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="inv_code_txt" text="0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="89.0" prefWidth="345.0" styleClass="box9">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="290.0">
+                           <children>
+                              <Text fx:id="total_txt" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="190.13671267032623">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#fa0a0a" strokeType="OUTSIDE" strokeWidth="0.0" text="إجمالي">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="68.0" prefWidth="311.0">
+                           <children>
+                              <Text fx:id="paid_txt" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="187.35699450969696">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fill="#fa0a0a" strokeType="OUTSIDE" strokeWidth="0.0" text="مدفوع">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="57.0" prefWidth="311.0">
+                           <children>
+                              <Text fx:id="remian_txt" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="191.35705643892288">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#fa0a0a" strokeType="OUTSIDE" strokeWidth="0.0" text="متبقي">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="89.0" prefWidth="345.0" styleClass="box9">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="290.0">
+                           <children>
+                              <Text fx:id="invoce_date" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="190.13671267032623">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#fa0a0a" strokeType="OUTSIDE" strokeWidth="0.0" text="تاريخ الفاتورة">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="68.0" prefWidth="311.0">
+                           <children>
+                              <Text fx:id="custName" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="187.35699450969696">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fill="#fa0a0a" strokeType="OUTSIDE" strokeWidth="0.0" text="العميل">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="57.0" prefWidth="311.0">
+                           <children>
+                              <Text fx:id="userName" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="191.35705643892288">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#fa0a0a" strokeType="OUTSIDE" strokeWidth="0.0" text="محرر الفاتورة">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="edit_totalBox" layoutX="39.0" layoutY="310.8" prefHeight="51.0" prefWidth="822.0" styleClass="box2" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="310.8">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Button graphicTextGap="10.0" mnemonicParsing="false" onMouseClicked="#save" prefHeight="50.0" prefWidth="140.0" styleClass="button-6" text="حفظ ">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SAVE" size="25" />
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="paidField" alignment="CENTER" prefHeight="40.0" prefWidth="128.0" promptText="الملبغ المدفوع" styleClass="input">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font></TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="المبلغ المدفوع" textAlignment="RIGHT" wrappingWidth="97.40029907226562">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="invTotal" alignment="CENTER" prefHeight="44.0" prefWidth="186.0" promptText="الإجــــــــمالي" styleClass="input">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="الإجـــــــمالي" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="5.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="editBox" alignment="CENTER" layoutX="5.0" layoutY="124.0" prefHeight="200.0" prefWidth="83.0" spacing="10.0">
+         <children>
+            <TextField fx:id="amountField1" alignment="CENTER" onAction="#addToInvoice" prefHeight="44.0" prefWidth="123.0" promptText="الكمية" styleClass="input">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="addItemToInvoice1" mnemonicParsing="false" onMouseClicked="#addItemToInvoice" prefHeight="34.0" prefWidth="83.0" styleClass="button-4" text="تعديل">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TableView fx:id="payTable" editable="true" layoutX="10.0" layoutY="370.0" prefHeight="238.0" prefWidth="852.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="370.0">
+         <columns>
+            <TableColumn fx:id="payEditCol" maxWidth="100.0" minWidth="100.0" prefWidth="72.66668319702148" text="تعديل" />
+            <TableColumn fx:id="paidTypeCol" maxWidth="1000.0" minWidth="100.0" prefWidth="163.99998474121094" text="تفاصيل الدفع" />
+            <TableColumn fx:id="paidCol" maxWidth="1000.0" minWidth="75.0" prefWidth="107.20001220703125" text="المدفوع" />
+            <TableColumn fx:id="dateCol" maxWidth="1000.0" minWidth="100.0" prefWidth="142.40008544921875" text="تاريخ الاستلام" />
+            <TableColumn fx:id="userCol" maxWidth="1000.0" minWidth="100.0" prefWidth="-1.0" text="المستلم" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

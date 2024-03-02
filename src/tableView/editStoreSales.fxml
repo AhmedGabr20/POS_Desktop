@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="572.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditStoreSales">
+   <children>
+      <HBox alignment="CENTER" prefHeight="63.0" prefWidth="572.0">
+         <children>
+            <Text fill="#1315eb" strokeType="OUTSIDE" strokeWidth="0.0" text="تعديل سعر المخزن" textAlignment="CENTER" wrappingWidth="509.46997022628784">
+               <font>
+                  <Font name="Arial Bold Italic" size="39.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <Pane prefHeight="7.0" prefWidth="567.0" style="-fx-background-color: #000000;" />
+      <HBox alignment="CENTER_RIGHT" prefHeight="55.0" prefWidth="572.0">
+         <children>
+            <ComboBox fx:id="storeNameField" prefHeight="43.0" prefWidth="346.0" style="-fx-font-size: 25;" styleClass="comboBox" />
+            <Text fill="#ea0808" strokeType="OUTSIDE" strokeWidth="0.0" text="    المخزن" textAlignment="RIGHT" wrappingWidth="133.8699936469402">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="98.0" prefWidth="572.0">
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+         <children>
+            <VBox alignment="CENTER" prefHeight="98.0" prefWidth="462.0">
+               <children>
+                  <Label text="برجاء اختيار النسبة المئوية  (%)">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="النسبة (+) زيادة - النسبة (-) نقص">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Spinner fx:id="persent" prefHeight="52.0" prefWidth="150.0" style="-fx-font-size: 20;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="81.0" prefWidth="572.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#updateAll" prefHeight="54.0" prefWidth="126.0" styleClass="box-samll" text="حفظ" textFill="#faf3f3">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
