@@ -1,0 +1,21 @@
+    <config>
+        <partation>G://تقارير برنامج الغياب</partation>
+        <companyName>شركة البــنـداري</companyName>
+        <companySpecialty>إدارة تـــشـــغـــيــل المـــصــــانــــع</companySpecialty>
+        <Email>ahmedaly.g.2020@gmail.com</Email>
+        <password>hhmjmtvacywknthu</password>
+        <pdfHeader>C:\\logo.png</pdfHeader>
+        <cardHeader>C:\\header.jpg</cardHeader>
+        <cardFooter>C:\\footer.jpg</cardFooter>
+        <ReceitHeader>C:\\header.jpg</ReceitHeader>
+        <backUpSetting>c:\\Program Files\\MySQL\\MySQL Workbench 8.0\\mysqldump --no-defaults --user=</backUpSetting>
+        <backUpPath>G://BackUp</backUpPath>
+        <StoreAlarm>1</StoreAlarm>
+		<database>pos_v1</database>
+		<databaseUser>hbstudent</databaseUser>
+		<databasePass>hbstudent</databasePass>
+		<databaseIp>localhost</databaseIp>
+		<BarcodePrinterName>localhost</BarcodePrinterName>
+		
+        
+    </config>
